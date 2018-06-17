@@ -7,7 +7,7 @@
       <groupId>br.com.gol.utility-service</groupId>
       <artifactId>utility-service</artifactId>
       <version>1.0.4</version>
-      <relativePath />
+      <relativePath>../</relativePath>
    </parent>
 
    <artifactId>commons</artifactId>
