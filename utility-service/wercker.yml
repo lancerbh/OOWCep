@@ -1,8 +1,0 @@
-source-dir: utility-service
-build:
-  steps:
-    - wercker/maven:
-      goals: clean
-#      settings: my-settings.xml
-      profiles: local
-      version: 3.2.5
