@@ -17,5 +17,6 @@ build:
     # https://github.com/wercker/step-maven
     - java/maven:
       goals: install
+      settings: oracle-settings.xml
       cache_repo: true
       version: 3.2.5
