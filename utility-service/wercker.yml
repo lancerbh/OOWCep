@@ -1,0 +1,7 @@
+build:
+  steps:
+    - wercker/maven:
+      goals: clean package
+#      settings: my-settings.xml
+      profiles: local
+      version: 3.2.5

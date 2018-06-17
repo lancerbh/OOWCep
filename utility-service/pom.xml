@@ -218,13 +218,13 @@
          </activation>
          <properties>
             <oracle.home>/Users/Lancer/Oracle/12.2.1.0/Middleware/Oracle_Home</oracle.home>
-            <oracle.adminurl>t3://129.156.116.225:9071</oracle.adminurl>
+            <oracle.adminurl>t3://129.156.116.115:7001</oracle.adminurl>
             <!--
             <oracle.adminurl>t3://127.0.0.1:7001</oracle.adminurl>
             -->
-            <oracle.user>weblogic</oracle.user>
-            <oracle.password>welcome1</oracle.password>
-            <oracle.target>javaoow__server_1</oracle.target>
+            <oracle.user>jcsAdmin</oracle.user>
+            <oracle.password>XyGdMhtW8_</oracle.password>
+            <oracle.target>Java2018_server_1</oracle.target>
          </properties>
       </profile>
    </profiles>
