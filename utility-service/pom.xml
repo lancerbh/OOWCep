@@ -175,6 +175,16 @@
                   <usenonexclusivelock>true</usenonexclusivelock>
                   <remote>true</remote>
                   <upload>true</upload>
+<!--
+                        <timeout>${stop-app.timeout}</timeout>
+-->
+                        <graceful>true</graceful>
+                        <rmiGracePeriod>120</rmiGracePeriod>
+                        <verbose>true</verbose>
+                        <debug>true</debug>
+                        <ignoresessions>true</ignoresessions>
+                        <retiretimeout>120</retiretimeout>
+
                </configuration>
                <executions>
                   <execution>
@@ -184,12 +194,14 @@
                         <goal>stop-app</goal>
                      </goals>
                      <configuration>
+                     <!--
                         <timeout>${stop-app.timeout}</timeout>
                         <graceful>true</graceful>
                         <rmiGracePeriod>120</rmiGracePeriod>
                         <verbose>true</verbose>
                         <debug>true</debug>
                         <ignoresessions>true</ignoresessions>
+                     -->
                      </configuration>
                   </execution>
                   <execution>
