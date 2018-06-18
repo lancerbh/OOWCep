@@ -62,3 +62,108 @@ stop-app-gol:
       profiles: gol
       version: 3.2.5
       debug: false
+
+undeploy-app-cloud:
+    # Steps make up the actions in your pipeline
+    # Read more about steps on our dev center:
+    # http://devcenter.wercker.com/docs/steps/index.html
+  steps:
+    # https://github.com/wercker/step-maven
+    - wercker/maven:
+      name: Undeploy App Cloud
+      pom: cep/pom.xml
+      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:undeploy
+      settings: oracle-settings.xml
+      # security_settings: ../oracle-settings-security.xml
+      # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
+      cache_repo: true
+      profiles: cloud
+      version: 3.2.5
+      debug: false
+
+undeploy-app-gol:
+    # Steps make up the actions in your pipeline
+    # Read more about steps on our dev center:
+    # http://devcenter.wercker.com/docs/steps/index.html
+  steps:
+    # https://github.com/wercker/step-maven
+    - wercker/maven:
+      name: Undeploy App Gol
+      pom: cep/pom.xml
+      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:undeploy
+      settings: oracle-settings.xml
+      # security_settings: oracle-settings-security.xml
+      cache_repo: true
+      profiles: gol
+      version: 3.2.5
+      debug: false
+
+deploy-app-cloud:
+    # Steps make up the actions in your pipeline
+    # Read more about steps on our dev center:
+    # http://devcenter.wercker.com/docs/steps/index.html
+  steps:
+    # https://github.com/wercker/step-maven
+    - wercker/maven:
+      name: Deploy App Cloud
+      pom: cep/pom.xml
+      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:deploy
+      settings: oracle-settings.xml
+      # security_settings: ../oracle-settings-security.xml
+      # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
+      cache_repo: true
+      profiles: cloud
+      version: 3.2.5
+      debug: false
+
+deploy-app-gol:
+    # Steps make up the actions in your pipeline
+    # Read more about steps on our dev center:
+    # http://devcenter.wercker.com/docs/steps/index.html
+  steps:
+    # https://github.com/wercker/step-maven
+    - wercker/maven:
+      name: Deploy App Gol
+      pom: cep/pom.xml
+      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:deploy
+      settings: oracle-settings.xml
+      # security_settings: oracle-settings-security.xml
+      cache_repo: true
+      profiles: gol
+      version: 3.2.5
+      debug: false
+
+start-app-cloud:
+    # Steps make up the actions in your pipeline
+    # Read more about steps on our dev center:
+    # http://devcenter.wercker.com/docs/steps/index.html
+  steps:
+    # https://github.com/wercker/step-maven
+    - wercker/maven:
+      name: Start App Cloud
+      pom: cep/pom.xml
+      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:start
+      settings: oracle-settings.xml
+      # security_settings: ../oracle-settings-security.xml
+      # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
+      cache_repo: true
+      profiles: cloud
+      version: 3.2.5
+      debug: false
+
+start-app-gol:
+    # Steps make up the actions in your pipeline
+    # Read more about steps on our dev center:
+    # http://devcenter.wercker.com/docs/steps/index.html
+  steps:
+    # https://github.com/wercker/step-maven
+    - wercker/maven:
+      name: Start App Gol
+      pom: cep/pom.xml
+      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:start
+      settings: oracle-settings.xml
+      # security_settings: oracle-settings-security.xml
+      cache_repo: true
+      profiles: gol
+      version: 3.2.5
+      debug: false
