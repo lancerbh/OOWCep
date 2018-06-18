@@ -48,11 +48,15 @@
 					<id>maven.oracle.com</id>
 					<releases>
 						<enabled>true</enabled>
+						<!--
 						<updatePolicy>never</updatePolicy>
+						-->
 					</releases>
 					<snapshots>
 						<enabled>false</enabled>
+						<!--
 						<updatePolicy>never</updatePolicy>
+						-->
 					</snapshots>
 					<url>https://maven.oracle.com</url>
 					<layout>default</layout>
@@ -62,6 +66,7 @@
 			<pluginRepositories>
 				<pluginRepository>
 					<id>maven.oracle.com</id>
+					<!--
 					<releases>
 						<enabled>true</enabled>
 						<updatePolicy>never</updatePolicy>
@@ -70,6 +75,7 @@
 						<enabled>false</enabled>
 						<updatePolicy>never</updatePolicy>
 					</snapshots>
+					-->
 					<url>https://maven.oracle.com</url>
 				</pluginRepository>
 			</pluginRepositories>
