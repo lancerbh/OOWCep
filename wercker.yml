@@ -6,8 +6,8 @@ box: openjdk:8-jdk
 
 source-dir: utility-service
 
-no-response-timeout: 30
-command-timeout: 60
+no-response-timeout: 60
+command-timeout: 120
 
 # This is the build pipeline. Pipelines are the core of wercker
 # Read more about pipelines on our dev center
