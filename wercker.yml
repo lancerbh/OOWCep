@@ -15,7 +15,7 @@ build:
     # http://devcenter.wercker.com/docs/steps/index.html
   steps:
     # https://github.com/wercker/step-maven
-    - java/maven:
+    - wercker/maven:
       goals: clean package
       settings: oracle-settings.xml
       security_settings: oracle-settings-security.xml
@@ -29,7 +29,7 @@ stop-app:
     # http://devcenter.wercker.com/docs/steps/index.html
   steps:
     # https://github.com/wercker/step-maven
-    - java/maven:
+    - wercker/maven:
       goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:stop-app
       settings: oracle-settings.xml
       security_settings: oracle-settings-security.xml
