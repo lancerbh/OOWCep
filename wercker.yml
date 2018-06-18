@@ -44,7 +44,7 @@ stop-app-cloud:
       cache_repo: true
       profiles: cloud
       version: 3.2.5
-      debug: true
+      debug: false
 
 stop-app-gol:
     # Steps make up the actions in your pipeline
@@ -61,4 +61,4 @@ stop-app-gol:
       cache_repo: true
       profiles: gol
       version: 3.2.5
-      debug: true
+      debug: false
