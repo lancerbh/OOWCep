@@ -16,7 +16,9 @@ build:
   steps:
     # https://github.com/wercker/step-maven
     - java/maven:
-      goals: install
+      goals: clean package
       settings: oracle-settings.xml
+      security_settings: oracle-settings-security.xml
       cache_repo: true
+      profiles: local
       version: 3.2.5

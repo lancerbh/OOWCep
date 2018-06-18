@@ -10,7 +10,7 @@
 		<server>
 			<id>maven.oracle.com</id>
 			<username>llcastro@grupomult.com.br</username>
-			<password>mO300341@</password>
+			<password>{17F2lj8ZJYAHDqvNUy5x0EU4Nc8bLO4CepJsKHV4mLU=}</password>
 			<configuration>
 				<basicAuthScope>
 					<host>ANY</host>
