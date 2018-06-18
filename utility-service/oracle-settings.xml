@@ -10,7 +10,7 @@
 		<server>
 			<id>maven.oracle.com</id>
 			<username>llcastro@grupomult.com.br</username>
-			<password>{17F2lj8ZJYAHDqvNUy5x0EU4Nc8bLO4CepJsKHV4mLU=}</password>
+			<password>mO300341@</password>
 			<configuration>
 				<basicAuthScope>
 					<host>ANY</host>
@@ -43,11 +43,11 @@
 					<url>https://maven.oracle.com</url>
 					<snapshots>
 						<enabled>true</enabled>
-						<updatePolicy>interval:86400</updatePolicy>
+						<updatePolicy>never</updatePolicy>
 					</snapshots>
 					<releases>
 						<enabled>true</enabled>
-						<updatePolicy>interval:86400</updatePolicy>
+						<updatePolicy>never</updatePolicy>
 					</releases>
 				</pluginRepository>
 			</pluginRepositories>
@@ -58,11 +58,11 @@
 					<url>https://maven.oracle.com</url>
 					<snapshots>
 						<enabled>true</enabled>
-						<updatePolicy>interval:86400</updatePolicy>
+						<updatePolicy>never</updatePolicy>
 					</snapshots>
 					<releases>
 						<enabled>true</enabled>
-						<updatePolicy>interval:86400</updatePolicy>
+						<updatePolicy>never</updatePolicy>
 					</releases>
 				</repository>
 			</repositories>
