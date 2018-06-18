@@ -25,6 +25,12 @@
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
       <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
       <java.version>1.8</java.version>
+      <stop-app.timeout>120</stop-app.timeout>
+      <undeploy.timeout>120</undeploy.timeout>
+      <deploy.retiretimeout>120</deploy.retiretimeout>
+      <deploy.timeout>120</deploy.timeout>
+      <start-app.retiretimeout>120</start-app.retiretimeout>
+      <start-app.timeout>120</start-app.timeout>
    </properties>
 
    <dependencyManagement>
@@ -177,6 +183,9 @@
                      <goals>
                         <goal>stop-app</goal>
                      </goals>
+                     <configuration>
+                        <timeout>${stop-app.timeout}</timeout>
+                     </configuration>
                   </execution>
                   <execution>
                      <id>wls-undeploy-app</id>
@@ -184,6 +193,9 @@
                      <goals>
                         <goal>undeploy</goal>
                      </goals>
+                     <configuration>
+                        <timeout>${undeploy.timeout}</timeout>
+                     </configuration>
                   </execution>
                   <execution>
                      <id>wls-deploy-app</id>
@@ -193,6 +205,8 @@
                      </goals>
                      <configuration>
                         <failOnError>true</failOnError>
+                        <retiretimeout>${deploy.retiretimeout}</retiretimeout>
+                        <timeout>${deploy.timeout}</timeout>
                      </configuration>
                   </execution>
                   <execution>
@@ -203,6 +217,8 @@
                      </goals>
                      <configuration>
                         <failOnError>true</failOnError>
+                        <retiretimeout>${start-app.retiretimeout}</retiretimeout>
+                        <timeout>${start-app.timeout}</timeout>
                      </configuration>
                   </execution>
                </executions>
@@ -253,6 +269,7 @@
       </profile>
    </profiles>
 
+<!--
    <repositories>
       <repository>
          <id>maven.oracle.com</id>
@@ -285,7 +302,6 @@
       </pluginRepository>
    </pluginRepositories>
 
-<!--
    <distributionManagement>
       <repository>
          <id>nexus</id>
