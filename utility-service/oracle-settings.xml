@@ -43,12 +43,10 @@
 					<url>https://maven.oracle.com</url>
 					<snapshots>
 						<enabled>true</enabled>
-						<updatePolicy>always</updatePolicy>
 						<updatePolicy>interval:86400</updatePolicy>
 					</snapshots>
 					<releases>
 						<enabled>true</enabled>
-						<updatePolicy>always</updatePolicy>
 						<updatePolicy>interval:86400</updatePolicy>
 					</releases>
 				</pluginRepository>
@@ -60,12 +58,10 @@
 					<url>https://maven.oracle.com</url>
 					<snapshots>
 						<enabled>true</enabled>
-						<updatePolicy>always</updatePolicy>
 						<updatePolicy>interval:86400</updatePolicy>
 					</snapshots>
 					<releases>
 						<enabled>true</enabled>
-						<updatePolicy>always</updatePolicy>
 						<updatePolicy>interval:86400</updatePolicy>
 					</releases>
 				</repository>
