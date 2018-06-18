@@ -185,6 +185,11 @@
                      </goals>
                      <configuration>
                         <timeout>${stop-app.timeout}</timeout>
+                        <graceful>true</graceful>
+                        <rmiGracePeriod>120</rmiGracePeriod>
+                        <verbose>true</verbose>
+                        <debug>true</debug>
+                        <ignoresessions>true</ignoresessions>
                      </configuration>
                   </execution>
                   <execution>
