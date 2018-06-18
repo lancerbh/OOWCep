@@ -31,6 +31,7 @@
       <deploy.timeout>120</deploy.timeout>
       <start-app.retiretimeout>120</start-app.retiretimeout>
       <start-app.timeout>120</start-app.timeout>
+      <weblogic-maven-plugin.timeout>60</weblogic-maven-plugin.timeout>
    </properties>
 
    <dependencyManagement>
@@ -175,15 +176,14 @@
                   <usenonexclusivelock>true</usenonexclusivelock>
                   <remote>true</remote>
                   <upload>true</upload>
-<!--
-                        <timeout>${stop-app.timeout}</timeout>
--->
-                        <graceful>true</graceful>
-                        <rmiGracePeriod>120</rmiGracePeriod>
-                        <verbose>true</verbose>
-                        <debug>true</debug>
-                        <ignoresessions>true</ignoresessions>
-                        <retiretimeout>120</retiretimeout>
+
+                  <timeout>${weblogic-maven-plugin.timeout}</timeout>
+                  <graceful>true</graceful>
+                  <rmiGracePeriod>${weblogic-maven-plugin.timeout}</rmiGracePeriod>
+                  <verbose>true</verbose>
+                  <debug>true</debug>
+                  <ignoresessions>true</ignoresessions>
+                  <retiretimeout>${weblogic-maven-plugin.timeout}</retiretimeout>
 
                </configuration>
                <executions>
@@ -210,9 +210,11 @@
                      <goals>
                         <goal>undeploy</goal>
                      </goals>
+                     <!--
                      <configuration>
                         <timeout>${undeploy.timeout}</timeout>
                      </configuration>
+                     -->
                   </execution>
                   <execution>
                      <id>wls-deploy-app</id>
@@ -222,8 +224,10 @@
                      </goals>
                      <configuration>
                         <failOnError>true</failOnError>
+                        <!--
                         <retiretimeout>${deploy.retiretimeout}</retiretimeout>
                         <timeout>${deploy.timeout}</timeout>
+                        -->
                      </configuration>
                   </execution>
                   <execution>
@@ -234,8 +238,10 @@
                      </goals>
                      <configuration>
                         <failOnError>true</failOnError>
+                        <!--
                         <retiretimeout>${start-app.retiretimeout}</retiretimeout>
                         <timeout>${start-app.timeout}</timeout>
+                        -->
                      </configuration>
                   </execution>
                </executions>
@@ -278,7 +284,7 @@
          </activation>
          <properties>
             <oracle.home>/Users/Lancer/Oracle/12.2.1.0/Middleware/Oracle_Home</oracle.home>
-            <oracle.adminurl>t3://10.50.164.39:7001</oracle.adminurl>
+            <oracle.adminurl>t3://201.48.61.117:7001</oracle.adminurl>
             <oracle.user>llcastro</oracle.user>
             <oracle.password>welcome1</oracle.password>
             <oracle.target>webapp_cluster_1</oracle.target>
