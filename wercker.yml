@@ -36,8 +36,8 @@ stop-app-cloud:
       goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:stop-app
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
-      maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
-      cache_repo: true
+      # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
+      cache_repo: false
       profiles: cloud
       version: 3.2.5
       debug: true
@@ -52,8 +52,8 @@ stop-app-gol:
       pom: cep/pom.xml
       goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:stop-app
       settings: oracle-settings.xml
-      security_settings: oracle-settings-security.xml
-      cache_repo: true
+      # security_settings: oracle-settings-security.xml
+      cache_repo: false
       profiles: gol
       version: 3.2.5
       debug: true
