@@ -2,11 +2,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
 
-<!--
 	<pluginGroups>
 		<pluginGroup>com.oracle.maven</pluginGroup>
 	</pluginGroups>
--->
 
 	<servers>
 		<server>
@@ -30,6 +28,7 @@
 					<id>Nexus</id>
 					<name>Nexus</name>
 					<url>http://nexus.grupomult.com.br:8081/repository/maven-mixed</url>
+					<!--
 					<layout>default</layout>
 					<snapshots>
 						<enabled>true</enabled>
@@ -39,6 +38,7 @@
 						<enabled>true</enabled>
 						<updatePolicy>never</updatePolicy>
 					</releases>
+					-->
 				</repository>
 			</repositories>
 
