@@ -23,7 +23,7 @@ build:
       profiles: local
       version: 3.2.5
 
-stop-app:
+stop-app-cloud:
     # Steps make up the actions in your pipeline
     # Read more about steps on our dev center:
     # http://devcenter.wercker.com/docs/steps/index.html
@@ -35,5 +35,22 @@ stop-app:
       settings: oracle-settings.xml
       # security_settings: oracle-settings-security.xml
       cache_repo: true
-      profiles: local
+      profiles: cloud
       version: 3.2.5
+      debug: true
+
+stop-app-gol:
+    # Steps make up the actions in your pipeline
+    # Read more about steps on our dev center:
+    # http://devcenter.wercker.com/docs/steps/index.html
+  steps:
+    # https://github.com/wercker/step-maven
+    - wercker/maven:
+      pom: cep/pom.xml
+      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:stop-app
+      settings: oracle-settings.xml
+      # security_settings: oracle-settings-security.xml
+      cache_repo: true
+      profiles: gol
+      version: 3.2.5
+      debug: true

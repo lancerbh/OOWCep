@@ -7,10 +7,11 @@
 	</pluginGroups>
 -->
 	<servers>
+
 		<server>
 			<id>maven.oracle.com</id>
 			<username>llcastro@grupomult.com.br</username>
-			<password>mO300341@</password>
+			<password>{/eptX13277UHJwH+2TcnUsZ8uSeivRmEa9eP2RxE61o=}</password>
 			<configuration>
 				<basicAuthScope>
 					<host>ANY</host>
@@ -29,33 +30,52 @@
 				</httpConfiguration>
 			</configuration>
 		</server>
+
 	</servers>
+
 	<profiles>
+
 		<profile>
+
 			<id>main</id>
+
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
+
 			<repositories>
 				<repository>
 					<id>maven.oracle.com</id>
 					<releases>
 						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
 					</releases>
 					<snapshots>
 						<enabled>false</enabled>
+						<updatePolicy>never</updatePolicy>
 					</snapshots>
 					<url>https://maven.oracle.com</url>
 					<layout>default</layout>
 				</repository>
 			</repositories>
+
 			<pluginRepositories>
 				<pluginRepository>
 					<id>maven.oracle.com</id>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+						<updatePolicy>never</updatePolicy>
+					</snapshots>
 					<url>https://maven.oracle.com</url>
 				</pluginRepository>
 			</pluginRepositories>
+
 		</profile>
+
 	</profiles>
 
 	<activeProfiles>
