@@ -142,7 +142,7 @@ start-app-cloud:
     - wercker/maven:
       name: Start App Cloud
       pom: cep/pom.xml
-      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:start
+      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:start-app
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
       # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
@@ -160,7 +160,7 @@ start-app-gol:
     - wercker/maven:
       name: Start App Gol
       pom: cep/pom.xml
-      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:start
+      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:start-app
       settings: oracle-settings.xml
       # security_settings: oracle-settings-security.xml
       cache_repo: true
