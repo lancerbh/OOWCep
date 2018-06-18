@@ -177,13 +177,14 @@
                   <remote>true</remote>
                   <upload>true</upload>
 
-                  <timeout>${weblogic-maven-plugin.timeout}</timeout>
                   <graceful>true</graceful>
+                  <timeout>${weblogic-maven-plugin.timeout}</timeout>
                   <rmiGracePeriod>${weblogic-maven-plugin.timeout}</rmiGracePeriod>
+
+                  <!--
                   <verbose>true</verbose>
                   <debug>true</debug>
                   <ignoresessions>true</ignoresessions>
-                  <!--
                   <retiretimeout>${weblogic-maven-plugin.timeout}</retiretimeout>
                   -->
 
