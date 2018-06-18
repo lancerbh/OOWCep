@@ -41,7 +41,7 @@ stop-app-cloud:
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
       # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
-      maven_opts: -Dtimeout=120
+      # maven_opts: -Dtimeout=120
       cache_repo: true
       profiles: cloud
       version: 3.2.5
@@ -60,9 +60,9 @@ stop-app-gol:
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
       # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
-      maven_opts: -Dtimeout=120
+      # maven_opts: -Dtimeout=120
       cache_repo: true
-      profiles: cloud
+      profiles: gol
       version: 3.2.5
       debug: false
 
@@ -79,7 +79,7 @@ undeploy-app-cloud:
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
       # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
-      maven_opts: -Dtimeout=120
+      # maven_opts: -Dtimeout=120
       cache_repo: true
       profiles: cloud
       version: 3.2.5
@@ -98,9 +98,9 @@ undeploy-app-gol:
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
       # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
-      maven_opts: -Dtimeout=120
+      # maven_opts: -Dtimeout=120
       cache_repo: true
-      profiles: cloud
+      profiles: gol
       version: 3.2.5
       debug: false
 
@@ -117,7 +117,7 @@ deploy-app-cloud:
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
       # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
-      maven_opts: -Dtimeout=120
+      # maven_opts: -Dtimeout=120
       cache_repo: true
       profiles: cloud
       version: 3.2.5
@@ -136,9 +136,9 @@ deploy-app-gol:
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
       # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
-      maven_opts: -Dtimeout=120
+      # maven_opts: -Dtimeout=120
       cache_repo: true
-      profiles: cloud
+      profiles: gol
       version: 3.2.5
       debug: false
 
@@ -155,7 +155,7 @@ start-app-cloud:
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
       # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
-      maven_opts: -Dtimeout=120
+      # maven_opts: -Dtimeout=120
       cache_repo: true
       profiles: cloud
       version: 3.2.5
@@ -174,8 +174,8 @@ start-app-gol:
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
       # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
-      maven_opts: -Dtimeout=120
+      # maven_opts: -Dtimeout=120
       cache_repo: true
-      profiles: cloud
+      profiles: gol
       version: 3.2.5
       debug: false
