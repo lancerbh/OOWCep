@@ -20,7 +20,7 @@ build:
       version: 3.2.5
       debug: false
 
-deploy-app:
+deploy-app-cloud:
 
   steps:
 
@@ -35,6 +35,10 @@ deploy-app:
       profiles: cloud
       version: 3.2.5
       debug: false
+
+deploy-app-gol:
+
+  steps:
 
     - wercker/maven:
       name: Deploy App Gol

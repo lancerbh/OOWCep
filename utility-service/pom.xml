@@ -172,20 +172,20 @@
                   <name>${project.build.finalName}</name>
                   <source>${project.build.directory}/${project.build.finalName}.${project.packaging}</source>
                   <targets>${oracle.target}</targets>
-                  <failOnError>false</failOnError>
-                  <usenonexclusivelock>true</usenonexclusivelock>
+                  <failOnError>true</failOnError>
                   <remote>true</remote>
                   <upload>true</upload>
 
                   <graceful>true</graceful>
                   <timeout>${weblogic-maven-plugin.timeout}</timeout>
                   <rmiGracePeriod>${weblogic-maven-plugin.timeout}</rmiGracePeriod>
+                  <retiretimeout>${weblogic-maven-plugin.timeout}</retiretimeout>
 
                   <!--
+                  <usenonexclusivelock>true</usenonexclusivelock>
                   <verbose>true</verbose>
                   <debug>true</debug>
                   <ignoresessions>true</ignoresessions>
-                  <retiretimeout>${weblogic-maven-plugin.timeout}</retiretimeout>
                   -->
 
                </configuration>
