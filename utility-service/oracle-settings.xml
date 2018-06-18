@@ -1,11 +1,76 @@
 <settings xmlns="http://maven.apache.org/SETTINGS/1.1.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
+
 <!--
 	<pluginGroups>
 		<pluginGroup>com.oracle.maven</pluginGroup>
 	</pluginGroups>
 -->
+
+	<servers>
+		<server>
+			<id>nexus</id>
+			<username>admin</username>
+			<password>{rTUiWr4Sb54HE6f7GfWDqkIpoNKosGvsAzkQXZVoh6s=}</password>
+		</server>
+	</servers>
+
+	<profiles>
+		<profile>
+
+			<id>main</id>
+
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+
+			<repositories>
+				<repository>
+					<id>Nexus</id>
+					<name>Nexus</name>
+					<url>http://nexus.grupomult.com.br:8081/repository/maven-mixed</url>
+					<layout>default</layout>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</snapshots>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+				</repository>
+			</repositories>
+
+			<pluginRepositories>
+				<pluginRepository>
+					<id>nexus</id>
+					<name>Nexus</name>
+					<url>http://nexus.grupomult.com.br:8081/repository/maven-mixed</url>
+					<layout>default</layout>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</snapshots>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+				</pluginRepository>
+			</pluginRepositories>
+
+		</profile>
+	</profiles>
+
+	<activeProfiles>
+		<activeProfile>main</activeProfile>
+	</activeProfiles>
+
+<!--
+	<pluginGroups>
+		<pluginGroup>com.oracle.maven</pluginGroup>
+	</pluginGroups>
+
 	<servers>
 
 		<server>
@@ -81,5 +146,6 @@
 	<activeProfiles>
 		<activeProfile>main</activeProfile>
 	</activeProfiles>
+-->
 
 </settings>

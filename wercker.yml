@@ -23,6 +23,7 @@ build:
       goals: clean package
       settings: oracle-settings.xml
       # security_settings: oracle-settings-security.xml
+      maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
       cache_repo: true
       profiles: local
       version: 3.2.5
@@ -40,7 +41,7 @@ stop-app-cloud:
       goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:stop-app
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
-      # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
+      maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
       # maven_opts: -Dtimeout=120
       cache_repo: true
       profiles: cloud
@@ -59,7 +60,7 @@ stop-app-gol:
       goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:stop-app
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
-      # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
+      maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
       # maven_opts: -Dtimeout=120
       cache_repo: true
       profiles: gol
@@ -78,7 +79,7 @@ undeploy-app-cloud:
       goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:undeploy
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
-      # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
+      maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
       # maven_opts: -Dtimeout=120
       cache_repo: true
       profiles: cloud
@@ -97,7 +98,7 @@ undeploy-app-gol:
       goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:undeploy
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
-      # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
+      maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
       # maven_opts: -Dtimeout=120
       cache_repo: true
       profiles: gol
@@ -116,7 +117,7 @@ deploy-app-cloud:
       goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:deploy
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
-      # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
+      maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
       # maven_opts: -Dtimeout=120
       cache_repo: true
       profiles: cloud
@@ -135,7 +136,7 @@ deploy-app-gol:
       goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:deploy
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
-      # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
+      maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
       # maven_opts: -Dtimeout=120
       cache_repo: true
       profiles: gol
@@ -154,7 +155,7 @@ start-app-cloud:
       goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:start-app
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
-      # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
+      maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
       # maven_opts: -Dtimeout=120
       cache_repo: true
       profiles: cloud
@@ -173,7 +174,7 @@ start-app-gol:
       goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:start-app
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
-      # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
+      maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
       # maven_opts: -Dtimeout=120
       cache_repo: true
       profiles: gol

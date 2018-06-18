@@ -183,7 +183,9 @@
                   <verbose>true</verbose>
                   <debug>true</debug>
                   <ignoresessions>true</ignoresessions>
+                  <!--
                   <retiretimeout>${weblogic-maven-plugin.timeout}</retiretimeout>
+                  -->
 
                </configuration>
                <executions>
