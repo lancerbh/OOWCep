@@ -179,9 +179,9 @@
                   <graceful>true</graceful>
                   <timeout>${weblogic-maven-plugin.timeout}</timeout>
                   <rmiGracePeriod>${weblogic-maven-plugin.timeout}</rmiGracePeriod>
-                  <retiretimeout>${weblogic-maven-plugin.timeout}</retiretimeout>
 
                   <!--
+                  <retiretimeout>${weblogic-maven-plugin.timeout}</retiretimeout>
                   <usenonexclusivelock>true</usenonexclusivelock>
                   <verbose>true</verbose>
                   <debug>true</debug>
