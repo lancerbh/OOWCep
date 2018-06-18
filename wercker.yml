@@ -19,7 +19,7 @@ build:
   steps:
     # https://github.com/wercker/step-maven
     - wercker/maven:
-      name: Maven clean package
+      name: Building App
       goals: clean package
       settings: oracle-settings.xml
       # security_settings: oracle-settings-security.xml
@@ -37,7 +37,7 @@ stop-app-cloud:
     - wercker/maven:
       name: Stop App Cloud
       pom: cep/pom.xml
-      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:stop-app
+      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:stop-app -Dtimeout=120
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
       # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
@@ -55,7 +55,7 @@ stop-app-gol:
     - wercker/maven:
       name: Stop App Gol
       pom: cep/pom.xml
-      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:stop-app
+      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:stop-app -Dtimeout=120
       settings: oracle-settings.xml
       # security_settings: oracle-settings-security.xml
       cache_repo: true
@@ -72,7 +72,7 @@ undeploy-app-cloud:
     - wercker/maven:
       name: Undeploy App Cloud
       pom: cep/pom.xml
-      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:undeploy
+      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:undeploy -Dtimeout=120
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
       # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
@@ -90,7 +90,7 @@ undeploy-app-gol:
     - wercker/maven:
       name: Undeploy App Gol
       pom: cep/pom.xml
-      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:undeploy
+      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:undeploy -Dtimeout=120
       settings: oracle-settings.xml
       # security_settings: oracle-settings-security.xml
       cache_repo: true
@@ -107,7 +107,7 @@ deploy-app-cloud:
     - wercker/maven:
       name: Deploy App Cloud
       pom: cep/pom.xml
-      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:deploy
+      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:deploy -Dtimeout=120
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
       # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
@@ -125,7 +125,7 @@ deploy-app-gol:
     - wercker/maven:
       name: Deploy App Gol
       pom: cep/pom.xml
-      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:deploy
+      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:deploy -Dtimeout=120
       settings: oracle-settings.xml
       # security_settings: oracle-settings-security.xml
       cache_repo: true
@@ -142,7 +142,7 @@ start-app-cloud:
     - wercker/maven:
       name: Start App Cloud
       pom: cep/pom.xml
-      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:start-app
+      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:start-app -Dtimeout=120
       settings: oracle-settings.xml
       # security_settings: ../oracle-settings-security.xml
       # maven_opts: -Dsettings.security=$WERCKER_SOURCE_DIR/oracle-settings-security.xml
@@ -160,7 +160,7 @@ start-app-gol:
     - wercker/maven:
       name: Start App Gol
       pom: cep/pom.xml
-      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:start-app
+      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:start-app -Dtimeout=120
       settings: oracle-settings.xml
       # security_settings: oracle-settings-security.xml
       cache_repo: true
