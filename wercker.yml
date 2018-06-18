@@ -23,6 +23,7 @@ build:
       cache_repo: true
       profiles: local
       version: 3.2.5
+      debug: false
 
 stop-app-cloud:
     # Steps make up the actions in your pipeline
