@@ -30,6 +30,7 @@ stop-app:
   steps:
     # https://github.com/wercker/step-maven
     - wercker/maven:
+      pom: cep/pom.xml
       goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:stop-app
       settings: oracle-settings.xml
       security_settings: oracle-settings-security.xml
