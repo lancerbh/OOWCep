@@ -100,49 +100,11 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-war-plugin</artifactId>
          </plugin>
-                <!--
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-source-plugin</artifactId>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                </plugin>
-                -->
-
          <plugin>
             <groupId>com.oracle.weblogic</groupId>
             <artifactId>weblogic-maven-plugin</artifactId>
          </plugin>
-<!--
-         <plugin>
-            <groupId>org.jvnet.jaxb2.maven2</groupId>
-            <artifactId>maven-jaxb2-plugin</artifactId>
-            <version>0.14.0</version>
-            <executions>
-               <execution>
-                  <goals>
-                     <goal>generate</goal>
-                  </goals>
-               </execution>
-            </executions>
-            <configuration>
-               <schemaLanguage>WSDL</schemaLanguage>
-               <generatePackage>br.com.gol.utilityservice.cep.gateway.model</generatePackage>
-               <generateDirectory>${project.basedir/src/main/java}</generateDirectory>
-               <schemas>
-                  <schema>
-                     <url>https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl</url>
-                  </schema>
-               </schemas>
-            </configuration>
-         </plugin>
--->
+
       </plugins>
    </build>
 
