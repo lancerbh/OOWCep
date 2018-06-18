@@ -34,7 +34,7 @@ stop-app-cloud:
       pom: cep/pom.xml
       goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:stop-app
       settings: oracle-settings.xml
-      security_settings: oracle-settings-security.xml
+      security_settings: ../oracle-settings-security.xml
       cache_repo: true
       profiles: cloud
       version: 3.2.5
