@@ -22,3 +22,17 @@ build:
       cache_repo: true
       profiles: local
       version: 3.2.5
+
+build:
+    # Steps make up the actions in your pipeline
+    # Read more about steps on our dev center:
+    # http://devcenter.wercker.com/docs/steps/index.html
+  steps:
+    # https://github.com/wercker/step-maven
+    - java/maven:
+      goals: com.oracle.weblogic:weblogic-maven-plugin:12.2.1-0-0:stop-app
+      settings: oracle-settings.xml
+      security_settings: oracle-settings-security.xml
+      cache_repo: true
+      profiles: local
+      version: 3.2.5
