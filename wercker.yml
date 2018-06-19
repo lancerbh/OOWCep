@@ -1,7 +1,6 @@
 box: openjdk:8-jdk
 
 source-dir: utility-service
-
 no-response-timeout: 60
 command-timeout: 60
 
