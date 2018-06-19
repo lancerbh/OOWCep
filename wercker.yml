@@ -29,12 +29,11 @@ build:
       version: 3.2.5
       debug: false
 
-# stop-app-cloud:
-stop-app:
+stop-app-cloud:
     # Steps make up the actions in your pipeline
     # Read more about steps on our dev center:
     # http://devcenter.wercker.com/docs/steps/index.html
-  # steps:
+  steps:
     # https://github.com/wercker/step-maven
     - wercker/maven:
       name: Stop App Cloud
@@ -49,11 +48,11 @@ stop-app:
       version: 3.2.5
       debug: false
 
-# stop-app-gol:
+stop-app-gol:
     # Steps make up the actions in your pipeline
     # Read more about steps on our dev center:
     # http://devcenter.wercker.com/docs/steps/index.html
-  # steps:
+  steps:
     # https://github.com/wercker/step-maven
     - wercker/maven:
       name: Stop App Gol
