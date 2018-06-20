@@ -19,7 +19,7 @@ build:
   steps:
     # https://github.com/wercker/step-maven
     - wercker/maven:
-      name: Building CEP App
+      name: Build App
       goals: clean package
       settings: oracle-settings.xml
       # security_settings: oracle-settings-security.xml
